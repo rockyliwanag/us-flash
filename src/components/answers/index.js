@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Answer() {
+function Answer(props) {
     return (
         <>
-            <h1> ANSWERS</h1>
+            <h1> {props.answer}</h1>
+            {console.log(props.answer)}
         </>
     )
 }

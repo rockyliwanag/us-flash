@@ -2,72 +2,72 @@ const flashcardData = [
     {
         id: 1,
         question: "What is the supreme law of the land?",
-        answer: "the Constitution"
+        answer: "▪ the Constitution"
     },
     {
         id: 2,
         question: "What does the Constitution do?",
-        answer: ["sets up the government", "defines the government", "protects basic rights of Americans"]
+        answer: ["▪ sets up the government", "▪ defines the government", "▪ protects basic rights of Americans"]
     },
     {
         id: 3,
         question: "The idea of self-government is in the first three words of the Constitution. What are these words?",
-        answer: "We the People"
+        answer: "▪ We the People"
     },
     {
         id: 4,
         question: "What is an amendment?",
-        answer: ["a change (to the Constitution)", "an addition (to the Constitution)"]
+        answer: ["▪ a change (to the Constitution)", "▪ an addition (to the Constitution)"]
     },
     {
         id: 5,
         question: "What do we call the first ten amendments to the Constitution?",
-        answer: "the Bill of Rights"
+        answer: "▪ the Bill of Rights"
     },
     {
         id: 6,
         question: "What is one right or freedom from the First Amendment?",
-        answer: ["speech", "religion", "assembly", "press", "petition the government"]
+        answer: ["▪ speech", "▪ religion", "▪ assembly", "▪ press", "▪ petition the government"]
     },
     {
         id: 7,
         question: "How many amendments does the Constitution have?",
-        answer: "twenty-seven (27)"
+        answer: "▪ twenty-seven (27)"
     },
     {
         id: 8,
         question: "What did the Declaration of Independence do?",
-        answer: ["announced our independence (from Great Britain)", "declared our independence (from Great Britain)", "said that the United States is free (from Great Britain)"]
+        answer: ["▪ announced our independence (from Great Britain)", "▪ declared our independence (from Great Britain)", "▪ said that the United States is free (from Great Britain)"]
     },
     {
         id: 9,
         question: "What are two rights in the Declaration of Independence?",
-        answer: ["life", "liberty", "pursuit of happiness"]
+        answer: ["▪ life", "▪ liberty", "▪ pursuit of happiness"]
     },
     {
         id: 10,
         question: "What is freedom of religion?",
-        answer: "You can practice any religion, or not practice a religion."
+        answer: "▪ You can practice any religion, or not practice a religion."
     },
     {
         id: 11,
-        question: "",
-        answer: ""
+        question: "What is the economic system in the United States?",
+        answer: ["▪ capitalist economy", "▪ market economy"]
     },
     {
         id: 12,
-        question: "",
-        answer: ""
+        question: "What is the “rule of law”?",
+        answer: ["▪ Everyone must follow the law.", "▪ Leaders must obey the law.", "▪ Government must obey the law.", "▪ No one is above the law."]
     },
     {
         id: 13,
-        question: "",
-        answer: ""
+        question: "Name one branch or part of the government.",
+        answer: ["▪ Congress", "▪ legislative", "▪ President", "▪ executive", "▪ the courts", "▪ judicial"]
     },
     {
         id: 14,
-        question: "",
-        answer: ""
+        question: "What stops one branch of government from becoming too powerful?",
+        answer: ["▪ checks and balances", "▪ separation of powers"]
     },
     {
         id: 15,
