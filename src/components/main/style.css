@@ -1,0 +1,22 @@
+.flash-card {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    justify-content: space-evenly;
+}
+
+.answer {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+}
+
+.flash-card button {
+    align-self: center;
+    padding: 1rem 3rem;
+}
