@@ -2,6 +2,7 @@ import React from 'react';
 import data from '../../data/flashcardData';
 import Question from '../questions/index';
 import Answer from '../answers/index';
+import './style.css';
 
 const getData = data[Math.floor(Math.random() * data.length)];
 class Main extends React.Component {
@@ -10,7 +11,8 @@ class Main extends React.Component {
         this.state = {
             id: getData.id,
             question: getData.question,
-            answer: getData.answer
+            answer: getData.answer,
+            showAnswer: false
         };
         this.handleData = this.handleData.bind(this);
     }
@@ -21,24 +23,34 @@ class Main extends React.Component {
             return {
                 id: nextData.id,
                 question: nextData.question,
-                answer: nextData.answer
+                answer: nextData.answer,
             };
-
-        }); console.log("nextData, ", nextData);
+        });
+        setTimeout(() => {
+            this.setState({
+                showAnswer: true
+            });
+        }, 5000);
+        console.log(this.state.showAnswer)
+        this.setState({
+            showAnswer: false
+        });
+        console.log(this.state.showAnswer)
     }
 
     render() {
         return (
             <div className="flash-card">
                 <div className="question">
-                    <h1>Question {this.state.id}</h1>
-                    <Question question={this.state.question} />{/*question data is passed to question component as props*/}
+                    <Question question={this.state.question} id={this.state.id} />{/*question data is passed to question component as props*/}
                 </div>
                 <div className="answer">
-                    <h1>Answer</h1>
-                    <Answer answer={this.state.answer} />
+                    <Answer answer={this.state.answer} showAnswer={this.state.showAnswer} />
                 </div>
+
+                {/* {this.state.showAnswer === false ? <button onClick={this.handleData}>Next</button> : null} */}
                 <button onClick={this.handleData}>Next</button>
+
             </div>
         )
     }
