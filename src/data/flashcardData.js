@@ -2,7 +2,7 @@ const flashcardData = [
     {
         id: 1,
         question: "What is the supreme law of the land?",
-        answer: "▪ the Constitution"
+        answer: ["▪ the Constitution"]
     },
     {
         id: 2,
@@ -12,7 +12,7 @@ const flashcardData = [
     {
         id: 3,
         question: "The idea of self-government is in the first three words of the Constitution. What are these words?",
-        answer: "▪ We the People"
+        answer: ["▪ We the People"]
     },
     {
         id: 4,
@@ -22,7 +22,7 @@ const flashcardData = [
     {
         id: 5,
         question: "What do we call the first ten amendments to the Constitution?",
-        answer: "▪ the Bill of Rights"
+        answer: ["▪ the Bill of Rights"]
     },
     {
         id: 6,
@@ -32,7 +32,7 @@ const flashcardData = [
     {
         id: 7,
         question: "How many amendments does the Constitution have?",
-        answer: "▪ twenty-seven (27)"
+        answer: ["▪ twenty-seven (27)"]
     },
     {
         id: 8,
@@ -47,7 +47,7 @@ const flashcardData = [
     {
         id: 10,
         question: "What is freedom of religion?",
-        answer: "▪ You can practice any religion, or not practice a religion."
+        answer: ["▪ You can practice any religion, or not practice a religion."]
     },
     {
         id: 11,
@@ -72,7 +72,7 @@ const flashcardData = [
     {
         id: 15,
         question: "Who is in charge of the executive branch?",
-        answer: "▪ the President"
+        answer: ["▪ the President"]
     },
     {
         id: 16,
@@ -82,42 +82,42 @@ const flashcardData = [
     {
         id: 17,
         question: "What are the two parts of the U.S. Congress?",
-        answer: "▪ the Senate and House (of Representatives)"
+        answer: ["▪ the Senate and House (of Representatives)"]
     },
     {
         id: 18,
         question: "How many U.S. Senators are there?",
-        answer: "▪ one hundred (100)"
+        answer: ["▪ one hundred (100)"]
     },
     {
         id: 19,
         question: "We elect a U.S. Senator for how many years? ",
-        answer: "▪ six (6)"
+        answer: ["▪ six (6)"]
     },
     {
         id: 20,
         question: "Who is one of your state’s U.S. Senators now?",
-        answer: "▪ Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S.Senators.]"
+        answer: ["▪ Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S.Senators.]"]
     },
     {
         id: 21,
         question: "The House of Representatives has how many voting members? ",
-        answer: "▪ four hundred thirty-five (435)"
+        answer: ["▪ four hundred thirty-five (435)"]
     },
     {
         id: 22,
         question: "We elect a U.S. Representative for how many years?",
-        answer: "▪ two (2)"
+        answer: ["▪ two (2)"]
     },
     {
         id: 23,
         question: "Name your U.S. Representative.",
-        answer: "▪ Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner.Also acceptable is any statement that the territory has no(voting) Representatives in Congress.]"
+        answer: ["▪ Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner.Also acceptable is any statement that the territory has no(voting) Representatives in Congress.]"]
     },
     {
         id: 24,
         question: "Who does a U.S. Senator represent?",
-        answer: "▪ all people of the state"
+        answer: ["▪ all people of the state"]
     },
     {
         id: 25,
@@ -127,52 +127,52 @@ const flashcardData = [
     {
         id: 26,
         question: "We elect a President for how many years?",
-        answer: "▪ four (4)"
+        answer: ["▪ four (4)"]
     },
     {
         id: 27,
         question: "In what month do we vote for President?",
-        answer: "▪ November"
+        answer: ["▪ November"]
     },
     {
         id: 28,
         question: "What is the name of the President of the United States now?",
-        answer: "Joseph R. Biden Jr."
+        answer: ["Joseph R. Biden Jr."]
     },
     {
         id: 29,
         question: "What is the name of the Vice President of the United States now?",
-        answer: "Kamala D. Harris"
+        answer: ["Kamala D. Harris"]
     },
     {
         id: 30,
         question: "If the President can no longer serve, who becomes President?",
-        answer: "▪ the Vice President"
+        answer: ["▪ the Vice President"]
     },
     {
         id: 31,
         question: "If both the President and the Vice President can no longer serve, who becomes President?",
-        answer: "▪ the Speaker of the House"
+        answer: ["▪ the Speaker of the House"]
     },
     {
         id: 32,
         question: "Who is the Commander in Chief of the military?",
-        answer: "▪ the President"
+        answer: ["▪ the President"]
     },
     {
         id: 33,
         question: "Who signs bills to become laws?",
-        answer: "▪ the President"
+        answer: ["▪ the President"]
     },
     {
         id: 34,
         question: "Who vetoes bills?",
-        answer: "▪ the President"
+        answer: ["▪ the President"]
     },
     {
         id: 35,
         question: "What does the President’s Cabinet do?",
-        answer: "▪ advises the President"
+        answer: ["▪ advises the President"]
     },
     {
         id: 36,
@@ -201,17 +201,17 @@ const flashcardData = [
     {
         id: 38,
         question: "What is the highest court in the United States?",
-        answer: "▪ the Supreme Court"
+        answer: ["▪ the Supreme Court"]
     },
     {
         id: 39,
         question: "How many justices are on the Supreme Court?",
-        answer: "▪ nine (9)"
+        answer: ["▪ nine (9)"]
     },
     {
         id: 40,
         question: "Who is the Chief Justice of the United States now?",
-        answer: "Chief Justice John G. Roberts, Jr."
+        answer: ["Chief Justice John G. Roberts, Jr."]
     },
     {
         id: 41,
@@ -226,27 +226,27 @@ const flashcardData = [
     {
         id: 43,
         question: "Who is the Governor of your state now?",
-        answer: "▪ Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.]"
+        answer: ["▪ Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.]"]
     },
     {
         id: 44,
         question: "What is the capital of your state?",
-        answer: "▪ Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a capital.Residents of U.S.territories should name the capital of the territory.]"
+        answer: ["▪ Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a capital.Residents of U.S.territories should name the capital of the territory.]"]
     },
     {
         id: 45,
         question: "What are the two major political parties in the United States?",
-        answer: "▪ Democratic and Republican"
+        answer: ["▪ Democratic and Republican"]
     },
     {
         id: 46,
         question: "What is the political party of the President now?",
-        answer: "▪ Democrat"
+        answer: ["▪ Democrat"]
     },
     {
         id: 47,
         question: "What is the name of the Speaker of the House of Representatives now?",
-        answer: "▪ Nancy Pelosi"
+        answer: ["▪ Nancy Pelosi"]
     },
     {
         id: 48,
@@ -281,7 +281,7 @@ const flashcardData = [
     {
         id: 54,
         question: "How old do citizens have to be to vote for President?",
-        answer: "▪ eighteen (18) and older"
+        answer: ["▪ eighteen (18) and older"]
     },
     {
         id: 55,
@@ -291,7 +291,7 @@ const flashcardData = [
     {
         id: 56,
         question: "When is the last day you can send in federal income tax forms?",
-        answer: "▪ April 15"
+        answer: ["▪ April 15"]
     },
     {
         id: 57,
@@ -321,12 +321,12 @@ const flashcardData = [
     {
         id: 62,
         question: "Who wrote the Declaration of Independence?",
-        answer: "▪ (Thomas) Jefferson"
+        answer: ["▪ (Thomas) Jefferson"]
     },
     {
         id: 63,
         question: "When was the Declaration of Independence adopted?",
-        answer: "▪ July 4, 1776"
+        answer: ["▪ July 4, 1776"]
     },
     {
         id: 64,
@@ -341,7 +341,7 @@ const flashcardData = [
     {
         id: 66,
         question: "When was the Constitution written?",
-        answer: "▪ 1787"
+        answer: ["▪ 1787"]
     },
     {
         id: 67,
@@ -356,12 +356,12 @@ const flashcardData = [
     {
         id: 69,
         question: "Who is the “Father of Our Country”?",
-        answer: "▪ (George) Washington"
+        answer: ["▪ (George) Washington"]
     },
     {
         id: 70,
         question: "Who was the first President?",
-        answer: "▪ (George) Washington"
+        answer: ["▪ (George) Washington"]
     },
     {
         id: 71,
@@ -406,32 +406,32 @@ const flashcardData = [
     {
         id: 79,
         question: "Who was President during World War I?",
-        answer: "▪ (Woodrow) Wilson"
+        answer: ["▪ (Woodrow) Wilson"]
     },
     {
         id: 80,
         question: "Who was President during the Great Depression and World War II?",
-        answer: "▪ (Franklin) Roosevelt"
+        answer: ["▪ (Franklin) Roosevelt"]
     },
     {
         id: 81,
         question: "Who did the United States fight in World War II?",
-        answer: "▪ Japan, Germany, and Italy"
+        answer: ["▪ Japan, Germany, and Italy"]
     },
     {
         id: 82,
         question: "Before he was President, Eisenhower was a general. What war was he in?",
-        answer: "▪ World War II"
+        answer: ["▪ World War II"]
     },
     {
         id: 83,
         question: "During the Cold War, what was the main concern of the United States?",
-        answer: "▪ Communism"
+        answer: ["▪ Communism"]
     },
     {
         id: 84,
         question: "What movement tried to end racial discrimination?",
-        answer: "▪ civil rights (movement)"
+        answer: ["▪ civil rights (movement)"]
     },
     {
         id: 85,
@@ -441,7 +441,7 @@ const flashcardData = [
     {
         id: 86,
         question: "What major event happened on September 11, 2001, in the United States?",
-        answer: "▪ Terrorists attacked the United States."
+        answer: ["▪ Terrorists attacked the United States."]
     },
     {
         id: 87,
@@ -478,12 +478,12 @@ const flashcardData = [
     {
         id: 89,
         question: "What ocean is on the West Coast of the United States?",
-        answer: "▪ Pacific (Ocean)"
+        answer: ["▪ Pacific (Ocean)"]
     },
     {
         id: 90,
         question: "What ocean is on the East Coast of the United States?",
-        answer: "▪ Atlantic (Ocean)"
+        answer: ["▪ Atlantic (Ocean)"]
     },
     {
         id: 91,
@@ -516,7 +516,7 @@ const flashcardData = [
     {
         id: 94,
         question: "What is the capital of the United States?",
-        answer: "▪ Washington, D.C."
+        answer: ["▪ Washington, D.C."]
     },
     {
         id: 95,
@@ -536,12 +536,12 @@ const flashcardData = [
     {
         id: 98,
         question: "What is the name of the national anthem?",
-        answer: "▪ The Star-Spangled Banner"
+        answer: ["▪ The Star-Spangled Banner"]
     },
     {
         id: 99,
         question: "When do we celebrate Independence Day?",
-        answer: "▪ July 4"
+        answer: ["▪ July 4"]
     },
     {
         id: 100,

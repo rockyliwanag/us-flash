@@ -1,8 +1,7 @@
 import React from 'react';
-import data from '../../data/flashcardData';
-import Question from '../questions/index';
-import Answer from '../answers/index';
-import './style.css';
+import data from '../data/flashcardData';
+import Question from '../components/Questions';
+import Answer from '../components/Answers';
 
 const getData = data[Math.floor(Math.random() * data.length)];
 class Main extends React.Component {
@@ -40,16 +39,18 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div className="flash-card">
-                <div className="question">
+            <div className="p-5 flex flex-col">
+                <div>
                     <Question question={this.state.question} id={this.state.id} />{/*question data is passed to question component as props*/}
                 </div>
-                <div className="answer">
+                <div>
                     <Answer answer={this.state.answer} showAnswer={this.state.showAnswer} />
                 </div>
-
-                {/* {this.state.showAnswer === false ? <button onClick={this.handleData}>Next</button> : null} */}
-                <button onClick={this.handleData}>Next</button>
+                <div>
+                    <div className='m-5 p-5 xl:max-w-3xl mx-auto'>
+                        <button className='bg-blue-500 text-white items-end px-6 p-2 mx-auto rounded-xl xl:text-2xl mb-5' onClick={this.handleData}>Next</button>
+                    </div>
+                </div>
 
             </div>
         )
