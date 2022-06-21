@@ -1,61 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import data from '../data/flashcardData';
 import Question from '../components/Questions';
 import Answer from '../components/Answers';
+import SideBar from '../components/SideBar';
 
 const getData = data[Math.floor(Math.random() * data.length)];
-class Main extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            id: getData.id,
-            question: getData.question,
-            answer: getData.answer,
-            showAnswer: false
-        };
-        this.handleData = this.handleData.bind(this);
-    }
 
-    handleData() {
-        const nextData = data[Math.floor(Math.random() * data.length)];
-        this.setState(() => {
-            return {
-                id: nextData.id,
-                question: nextData.question,
-                answer: nextData.answer,
-            };
-        });
-        setTimeout(() => {
-            this.setState({
-                showAnswer: true
-            });
-        }, 5000);
-        console.log(this.state.showAnswer)
-        this.setState({
-            showAnswer: false
-        });
-        console.log(this.state.showAnswer)
-    }
+const Main = () => {
 
-    render() {
-        return (
-            <div className="p-5 flex flex-col">
-                <div>
-                    <Question question={this.state.question} id={this.state.id} />{/*question data is passed to question component as props*/}
-                </div>
-                <div>
-                    <Answer answer={this.state.answer} showAnswer={this.state.showAnswer} />
-                </div>
-                <div>
-                    <div className='m-5 p-5 xl:max-w-3xl mx-auto'>
-                        <button className='bg-blue-500 text-white items-end px-6 p-2 mx-auto rounded-xl xl:text-2xl mb-5' onClick={this.handleData}>Next</button>
+    const [id, setId] = useState('')
+    const [question, setQuestion] = useState('')
+    const [answer, setAnswer] = useState('')
+    const [showAns, setShowAns] = useState()
+
+    useEffect(()=>{
+        setId(getData.id)
+        setQuestion(getData.question)
+        setAnswer(getData.answer)
+        setShowAns(true)   
+    }, [])
+
+    return (
+        <div className=' bg-slate-200 flex-grow'>
+            <div className='flex flex-col lg:flex-row h-full p-5'>
+                <div className="flex flex-col lg:w-screen lg:h-full items-start lg:mr-3 mb-5 lg:mb-0">
+                    <div className='border-gray-100 bg-gray-100 grow-0 border-2 w-full h-60 rounded-xl shadow-lg mb-7 items-start' /*style={{width:'48rem', height:'20rem'}}*/>
+                        <Question question={question} id={id} />{/*question data is passed to question component as props*/}
+                    </div>
+                    <div className='border-gray-100 bg-gray-100 grow border-2 w-full h-full rounded-xl shadow-lg'>
+                        <Answer answer={answer} showAnswer={showAns} />
                     </div>
                 </div>
-
+                <div className='lg:ml-2'>
+                    <div className='border-gray-100 bg-gray-100 border-2 h-full lg:ml-0 rounded-xl p-5 shadow-lg'>
+                        <SideBar />
+                    </div>
+                </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
-
 
 export default Main;

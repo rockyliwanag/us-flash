@@ -5,7 +5,7 @@ import Main from './pages/Main';
 
 function App() {
   return (
-    <div>
+    <div className='h-screen w-screen flex flex-col'>
       <Header />
       <Main />
     </div>
