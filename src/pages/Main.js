@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import datas from '../data/flashcardData';
 import Question from '../components/Questions';
 import Answer from '../components/Answers';
@@ -15,7 +15,6 @@ const Main = () => {
     const [showAns, setShowAns] = useState()
     const [userAns, setUserAns] = useState('')
     
-    const mounted = useRef();
     console.log('Render 1', newDataSet)
     newDataSet = datas.sort(() => 0.5 - Math.random())
 
@@ -26,7 +25,6 @@ const Main = () => {
             setQuestion(newData.question)
             setAnswer(newData.answer)
             setShowAns(false)
-            mounted.current = true;
             sideData = [...sideData]
             console.log('Render 2', newDataSet)
         // } else {
@@ -42,7 +40,6 @@ const Main = () => {
         setAnswer(nextData.answer)
         setShowAns(false)
             console.log('Render 3',newDataSet)
-        console.log('else', mounted)
     },[userAns])
         
     // const getData = () => {
@@ -75,7 +72,7 @@ const Main = () => {
                         <Answer id={id} answer={answer} showAnswer={showAns} userAnswer={(e) => { userAnswer(e) }}/>
                     </div>
                 </div>
-                <div className='mb-5 lg:mb-0 lg:ml-2 lg:mr-60'>
+                <div className='mb-5 lg:w-1/3 lg:mb-0 lg:ml-2 lg:mr-60'>
                     <div className='border-gray-100 bg-gray-100 border-2 h-full lg:ml-0 rounded-xl p-5 shadow-lg'>
                         <SideBar analytics={sideData}/>
                     </div>
