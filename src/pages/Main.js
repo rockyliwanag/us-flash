@@ -3,81 +3,83 @@ import datas from '../data/flashcardData';
 import Question from '../components/Questions';
 import Answer from '../components/Answers';
 import SideBar from '../components/SideBar';
+import Results from '../components/Results';
 
 let newDataSet = []
-let sideData = []
+let analytics = []
 
 const Main = () => {
-    
     const [id, setId] = useState('')
     const [question, setQuestion] = useState('')
     const [answer, setAnswer] = useState('')
     const [showAns, setShowAns] = useState()
-    const [userAns, setUserAns] = useState('')
+    const [showResults, setResults] = useState(false)
+    const [newData, setNewData] = useState({})
     
-    console.log('Render 1', newDataSet)
-    newDataSet = datas.sort(() => 0.5 - Math.random())
-
+    //initialize first 10 Q&A
     useEffect(() => {
-        let newData = newDataSet.pop()
-        // if (!mounted.current) {
+        newDataSet = datas.sort(() => 0.5 - Math.random()).slice(0,11)
+        setNewData(newDataSet.pop())
+    }, []);
+    
+    console.log('first dataSet', newDataSet)
+
+   
+    useEffect(() => {
+        if(analytics.length < 10){
             setId(newData.id)
             setQuestion(newData.question)
             setAnswer(newData.answer)
             setShowAns(false)
-            sideData = [...sideData]
-            console.log('Render 2', newDataSet)
-        // } else {
+        } else {
+            setResults(true)
 
- 
-        // }
-    }, []);
-
-    useEffect(() => {
-        let nextData = newDataSet.pop()
-        setId(nextData.id)
-        setQuestion(nextData.question)
-        setAnswer(nextData.answer)
-        setShowAns(false)
-            console.log('Render 3',newDataSet)
-    },[userAns])
-        
-    // const getData = () => {
-    //     let qaData = newDataSet.pop()
-    //     return qaData
-    // }
+            console.log('END')
+        }
+    }, [newData.id, newData.question, newData.answer])
+  
     
-    // Function to add user answers to storeAnswers variable array.
+    // Function to add user answers to analytics variable array.
     const userAnswer = (userData) => {
-        let newObj = {
+        if(analytics.length < 10) 
+        {let newObj = {
             id,
             question,
             answer,
             userInput : userData.userAns,
             correctResult: userData.correctResult
         }
-        setUserAns(newObj)
-        sideData = [...sideData, newObj]
-        console.log('Answer, ', newDataSet)
+        analytics = [...analytics, newObj]
+        setNewData(newDataSet.pop())} else {
+            setId('')
+            setQuestion('')
+            setAnswer('')
+            setShowAns(false)
+        };
     }
 
     return (
         <div className=' bg-slate-200 flex-grow'>
+            { !showResults ? 
             <div className='flex flex-col-reverse justify-end lg:flex-row h-full p-5'>
-                <div className="flex flex-col lg:w-screen lg:h-full items-start lg:mr-3 lg:ml-60 mb-5 lg:mb-0">
-                    <div className='border-gray-100 bg-gray-100 border-2 w-full h-60 rounded-xl shadow-lg mb-7 items-start' /*style={{width:'48rem', height:'20rem'}}*/>
-                        <Question question={question} id={id} />{/*question data is passed to question component as props*/}
+                <div className='flex flex-col lg:w-screen lg:h-full items-start lg:mr-3 lg:ml-60 mb-5 lg:mb-0'>
+                    <div className='border-gray-100 bg-gray-100 border-2 w-full h-60 rounded-xl shadow-lg mb-7 items-start'>
+                        <Question question={question} id={id} />
                     </div>
                     <div className='border-gray-100 bg-gray-100 border-2 w-full h-full rounded-xl shadow-lg'>
-                        <Answer id={id} answer={answer} showAnswer={showAns} userAnswer={(e) => { userAnswer(e) }}/>
+                        <Answer id={id} answer={answer} showAnswer={showAns} counter={analytics.length} userAnswer={(e) => { userAnswer(e) }}/>
                     </div>
                 </div>
                 <div className='mb-5 lg:w-1/3 lg:mb-0 lg:ml-2 lg:mr-60'>
                     <div className='border-gray-100 bg-gray-100 border-2 h-full lg:ml-0 rounded-xl p-5 shadow-lg'>
-                        <SideBar analytics={sideData}/>
+                        <SideBar analytics={analytics}/>
                     </div>
                 </div>
-            </div>
+            </div> :
+            <div className='border-slate-900'>
+                <Results analytics={analytics}/>
+            </div> 
+            }
         </div>
     )
 }
