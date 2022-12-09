@@ -1,13 +1,11 @@
 import React from 'react';
-
-import './App.css';
-import Header from './components/header/index';
-import Main from './components/main/index';
+import Header from './components/Header';
+import Main from './pages/Main';
 
 
 function App() {
   return (
-    <div className="App">
+    <div className='h-screen w-screen flex flex-col'>
       <Header />
       <Main />
     </div>
