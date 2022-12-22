@@ -22,9 +22,6 @@ const Main = () => {
         setNewData(newDataSet.pop())
     }, []);
     
-    // console.log('first dataSet', newData)
-
-   
     useEffect(() => {
         if(analytics.length < 10){
             setId(newData.id)
@@ -33,8 +30,6 @@ const Main = () => {
             setShowAns(false)
         } else {
             setResults(true)
-
-            console.log('END')
         }
     }, [newData.id, newData.question, newData.answer])
   

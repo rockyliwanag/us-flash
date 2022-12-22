@@ -15,7 +15,6 @@ function Results(props) {
             <div className='my-10 px-5'>
                 {props.analytics.map((x, i) => <ul><li key={i}><span className="font-semibold text-right">{i +1}</span> - {x.question}</li></ul>)}
             </div>
-            {console.log("Resuults",props)}
             <div className='text-center my-10'>
                 <button className='rounded-3xl border-1 border-gray-600 bg-gray-400 text-gray-200 font-semibold py-2 px-6 hover:bg-sky-700' onClick={refresh}>Try Again</button>
             </div>

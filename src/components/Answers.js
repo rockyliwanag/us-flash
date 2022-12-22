@@ -8,8 +8,6 @@ function Answer(props) {
     const [userAns, setUserAns] = useState(null);
     const [showAns, setShowAns] = useState(props.showAnswer)
 
-    // console.log('counter', props.counter);
-
     const onchange = (data) => {
         setUserAns(data)
         setShowAns(true)

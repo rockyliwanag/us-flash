@@ -3,7 +3,6 @@ import React from 'react'
 const SideBar = (props) => {
   const percentage = Math.round(props.analytics.filter((result) => result.correctResult === true).length/props.analytics.length * 100).toString()
   const correctAns = (x) => props.analytics.filter((result) => result.correctResult === x).length
-  console.log('first', props)
  
   return (
     <div className='flex lg:flex-col space-x-10 lg:space-x-0 justify-center'>
