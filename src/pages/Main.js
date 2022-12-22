@@ -22,7 +22,7 @@ const Main = () => {
         setNewData(newDataSet.pop())
     }, []);
     
-    console.log('first dataSet', newDataSet)
+    // console.log('first dataSet', newData)
 
    
     useEffect(() => {

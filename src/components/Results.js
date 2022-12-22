@@ -2,6 +2,7 @@ import React from 'react';
 
 function Results(props) {
     const percentage = Math.round(props.analytics.filter((result) => result.correctResult === true).length/10 * 100).toString()
+    const refresh = () => window.location.reload(true)
     return (
         <div className='container mx-auto'>
             <div className='p-5 mt-20 text-center'>
@@ -16,7 +17,7 @@ function Results(props) {
             </div>
             {console.log("Resuults",props)}
             <div className='text-center my-10'>
-                <a className='rounded-3xl border-1 border-gray-600 bg-gray-400 text-gray-200 font-semibold py-2 px-6 hover:bg-sky-700' href='/'>Try Again</a>
+                <button className='rounded-3xl border-1 border-gray-600 bg-gray-400 text-gray-200 font-semibold py-2 px-6 hover:bg-sky-700' onClick={refresh}>Try Again</button>
             </div>
         </div>
     )
